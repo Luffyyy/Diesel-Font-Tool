@@ -1,0 +1,9 @@
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\FontsPD2\FontsPD2\obj\Release\FontsPD2.FontsPD2.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\FontsPD2\FontsPD2\obj\Release\FontsPD2.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\FontsPD2\FontsPD2\obj\Release\FontsPD2.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\bin\Release\PD2FontTool.exe.config
+C:\Users\Daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\bin\Release\PD2FontTool.exe
+C:\Users\Daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\bin\Release\PD2FontTool.pdb
+C:\Users\Daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Release\PD2FontTool.Properties.Resources.resources
+C:\Users\Daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Release\PD2FontTool.exe
+C:\Users\Daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Release\PD2FontTool.pdb
