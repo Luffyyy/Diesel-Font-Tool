@@ -39,7 +39,7 @@ namespace FontsPD2
                 try{
                     LoadFont(ofd.FileName);
                  }
-                 catch(Exception ex) { MessageBox.Show("an error occurred while loading the font file"); }    
+                 catch(Exception ex) { MessageBox.Show("an error occurred while loading the font file.. \r\n" + ex); }    
             }
         }
         void LoadFont(string FileName) {
@@ -64,37 +64,35 @@ namespace FontsPD2
             TexHeight = bin.ReadBytes(4);
 
             bin.BaseStream.Position = 0;
-            part1array = bin.ReadBytes(part2 - 4).ToList();
+            part1array = bin.ReadBytes(part2).ToList();
             characters = part1array[0];
 
             bin.BaseStream.Position = part2;
-            part2array = bin.ReadBytes(part3 - 4).ToList();
+            part2array = bin.ReadBytes(part3).ToList();
 
             bin.BaseStream.Position = part3;
-            part3array = bin.ReadBytes(part4 - 4).ToList();
+            part3array = bin.ReadBytes(part4).ToList();
 
             bin.BaseStream.Position = part4;
-            part4array = bin.ReadBytes(part5 - 4).ToList();
+            part4array = bin.ReadBytes(part5).ToList();
 
             bin.BaseStream.Position = part5;
-            part5array = bin.ReadBytes((int)bin.BaseStream.Length - 1);
+            part5array = bin.ReadBytes((int)bin.BaseStream.Length);
 
             bin.Close();
             fs.Close();
         }
         private void button2_Click(object sender, EventArgs e)
-        {
+        {                
+                File.WriteAllText(ofd.FileName, "");
                 FileStream fs = File.OpenWrite(ofd.FileName);
                 BinaryWriter bw = new BinaryWriter(fs);
                 bw.BaseStream.Position = 0;
                 bw.Write(part1array.ToArray());
-
                 bw.BaseStream.Position = 76;
                 bw.Write(TexWidth.ToArray());
-
                 bw.BaseStream.Position = 80;                       
                 bw.Write(TexHeight.ToArray());
-
                 bw.BaseStream.Position = part2;
                 bw.Write(part2array.ToArray());         
                 bw.BaseStream.Position = part3;                
@@ -177,7 +175,12 @@ namespace FontsPD2
                     reader.Close();
                 }
             }
-            catch (Exception ex) { MessageBox.Show("an error occurred while loading the fnt file"); }
+            catch (Exception ex) { MessageBox.Show("an error occurred while loading the fnt file.. \r\n" + ex ); }
+
+        }
+
+        private void FontsPD2_Load(object sender, EventArgs e)
+        {
 
         }
     }

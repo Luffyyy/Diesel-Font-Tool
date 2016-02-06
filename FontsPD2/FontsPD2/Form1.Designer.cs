@@ -79,7 +79,8 @@
             this.MaximumSize = new System.Drawing.Size(314, 112);
             this.MinimumSize = new System.Drawing.Size(314, 112);
             this.Name = "FontsPD2";
-            this.Text = "PD2 Font Tool v1";
+            this.Text = "PD2 Font Tool v1.0.2";
+            this.Load += new System.EventHandler(this.FontsPD2_Load);
             this.ResumeLayout(false);
 
         }
