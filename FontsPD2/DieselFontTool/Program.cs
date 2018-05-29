@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FontsPD2
+namespace DieselFontTool
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace FontsPD2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FontsPD2());
+            Application.Run(new MainForm());
         }
     }
 }

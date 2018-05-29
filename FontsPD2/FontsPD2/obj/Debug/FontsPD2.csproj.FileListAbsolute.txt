@@ -1,9 +1,0 @@
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\bin\Debug\FontsPD2.exe.config
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Debug\FontsPD2.csprojResolveAssemblyReference.cache
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Debug\FontsPD2.Properties.Resources.resources
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Debug\FontsPD2.csproj.GenerateResource.Cache
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\bin\Debug\FontsPD2.exe
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\bin\Debug\FontsPD2.pdb
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Debug\FontsPD2.exe
-c:\users\daniel\documents\visual studio 2015\Projects\FontsPD2\FontsPD2\obj\Debug\FontsPD2.pdb
-C:\Users\Daniel\Documents\Visual Studio 2015\Projects\FontsPD2\FontsPD2\obj\Debug\FontsPD2.FontsPD2.resources
