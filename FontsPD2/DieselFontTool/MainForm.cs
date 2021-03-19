@@ -1,6 +1,7 @@
 ﻿using DieselEngineFormats.Font;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -13,6 +14,7 @@ namespace DieselFontTool
         {
             InitializeComponent();
         }
+
 
         DieselFont currentFont;
         string fontName;
@@ -27,7 +29,9 @@ namespace DieselFontTool
                 settings.DtdProcessing = DtdProcessing.Parse;
                 fontName = ofd.FileName.Replace(".fnt", "");
                 using (var xmlRead = XmlReader.Create(ofd.FileName, settings))
+                {
                     currentFont = new DieselFont(xmlRead);
+                }
 
                 SaveFont.Enabled = true;
             }
@@ -38,15 +42,25 @@ namespace DieselFontTool
             if (currentFont != null)
             {
                 var sfd = new SaveFileDialog();
-                sfd.Filter = "Disel Font(*.font)|*.font|All files(*.*)|*.*";
+                sfd.Filter = "Diesel Font(*.font)|*.font|All files(*.*)|*.*";
+                sfd.FileName = fontName.Split('\\').Last();
                 if (sfd.ShowDialog() == DialogResult.OK)
+                {
                     using (var fs = new FileStream(sfd.FileName, FileMode.Create, FileAccess.Write))
                     {
                         currentFont.WriteDieselData(new BinaryWriter(fs), largeModeCheckBox.Checked);
-                        string textureName = fontName+"_0.dds";
+                        string textureName = fontName + "_0.dds";
                         if (File.Exists(textureName))
-                            File.Move(textureName, sfd.FileName.Replace(".font", "")+".texture");
+                        {
+                            string moveTo = sfd.FileName.Replace(".font", "") + ".texture";
+                            if (File.Exists(moveTo))
+                            {
+                                File.Delete(moveTo);
+                            }
+                            File.Move(textureName, moveTo);
+                        }
                     }
+                }
             }
         }
     }
