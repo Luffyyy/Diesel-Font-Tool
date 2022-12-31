@@ -2,8 +2,11 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>14400967941557740344.ico</ApplicationIcon>
+    <UseWPF>True</UseWPF>
+    <RollForward>Major</RollForward>
   </PropertyGroup>
 
   <ItemGroup>
